@@ -5,7 +5,7 @@ export const LocaleContext = createContext();
 export function LocaleProvider({ children }) {
   const [locale, setLocale] = useState(() => {
     const saved = localStorage.getItem("locale");
-    return saved || "id"; // default Bahasa Indonesia
+    return saved || "id"; 
   });
 
   useEffect(() => {

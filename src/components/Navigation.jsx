@@ -33,7 +33,6 @@ function Navigation() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  // cek apakah sedang di halaman login atau register
   const isAuthPage = location.pathname === "/login" || location.pathname === "/register";
 
   const handleLogout = () => {
@@ -46,7 +45,6 @@ function Navigation() {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
-  // Object translation
   const translations = {
     id: { logout: "Keluar" },
     en: { logout: "Logout" },
@@ -56,7 +54,6 @@ function Navigation() {
     <nav className="navbar">
       <ul className="navbar-links">
         {isAuthPage ? (
-          // Login/Register page → hanya toggle theme & bahasa
           <>
             <li>
               <button onClick={toggleTheme} className="theme-toggle">

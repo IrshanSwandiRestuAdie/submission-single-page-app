@@ -11,7 +11,6 @@ function LoginPage() {
   const navigate = useNavigate();
   const { locale } = useContext(LocaleContext);
 
-  // Translation object
   const texts = {
     id: {
       title: "Login",
